@@ -1,0 +1,1 @@
+When using EagleCAD to open the Prototype layouts, some references might be broken initially. Relocate the files in "./lbr/SparkFun-*". (* means wildcard/anything)
