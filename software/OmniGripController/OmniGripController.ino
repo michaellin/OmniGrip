@@ -76,7 +76,7 @@ int toggleSwitch      = 0; //State for switch. 1 if switch pressed. 0 otherwise.
 //int K1[totalStates] = {40,  60,  75};
 //int K2[totalStates] = {200, 250, 290};
 int K1[totalStates] = {210, 280, 350};   //Safer set
-int K2[totalStates] = {825, 1100, 1375}; //Safer set
+int K2[totalStates] = {900, 1200, 1500}; //Safer set
 //int K1[totalStates] = {240,  320,  400}; //Stiffer set
 //int K2[totalStates] = {1050, 1400, 1750}; //Stiffer set
 
@@ -147,21 +147,22 @@ void loop() {
      if (conditionState == totalStates) { //Loop around every x amount of states
        conditionState = 0;
      }
-     //LEDState = conditionState;
+     LEDState = conditionState;
    }
    LEDState = conditionState+1; //conditionState+1 since I want to toggle from 1 to 3
    
    /* Stiffness control */
    float spring_pos1 = 0;                           //Spring 1 start at position 0
    float kp1 = K1[conditionState];                  //Spring 1 stiffness coefficient in mNm/rad
-   float spring_pos2 = maxGripEncCount*3/5;         //Spring 2  starts at 15 degrees (Max open an close is 25 degrees)
+   float spring_pos2 = maxGripEncCount*60/100;         //Spring 2  starts at 15 degrees (Max open an close is 25 degrees)
+   float pos2_offset = maxGripEncCount*55/100;
    float kp2 = K2[conditionState];                  //Spring 2 stiffness coefficient in mNm/rad
    
    if (encoder_reading > spring_pos1) {
        cmdPWM = (kp1 * (encoder_reading-spring_pos1) * conv_factor);
    }
    if (encoder_reading > spring_pos2) {
-       cmdPWM += (kp2 * (encoder_reading-spring_pos2) * conv_factor);
+       cmdPWM = (kp2 * (encoder_reading-pos2_offset) * conv_factor) + (kp1 * (encoder_reading-spring_pos1) * conv_factor);
    }
    cmdPWM += force_offset; //Adds the force offset
    
