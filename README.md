@@ -3,6 +3,7 @@ The OmniGrip is a master manipulator gripper device capable of rendering a progr
 
 ## Assembly Instructions
 List of materials needed to assemble the OmniGrip:
+
 1. (7) 3D printed parts of the device
 2. (6) Mini High-Precision Ball Bearing - ABEC-5                                           [MC 57155K355]
 3. (1) 10 Ft. Type 18-8 Stainless Steel Wire Rope, 7x19, 0.024" Dia, 10 Lb Cap., 10'       [MC 3461T621]
