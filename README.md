@@ -7,14 +7,14 @@ List of materials needed to assemble the OmniGrip:
 0. (quantity) description [McMaster-Carr part number]
 
 1. (8) 3D printed parts of the device
-  a. Long lever
-  b. Short lever
-  c. Frame center piece
-  d. Frame top piece
-  e. Frame bottom piece
-  f. Long capstan gear
-  g. Short capstan gear
-  h. Handle
+  1. Long lever
+  2. Short lever
+  3. Frame center piece
+  4. Frame top piece
+  5. Frame bottom piece
+  6. Long capstan gear
+  7. Short capstan gear
+  8. Handle
 2. (6) Mini High-Precision Ball Bearing - ABEC-5                                                                [MC 57155K355]
 3. (1) 10 Ft. Type 304 Stainless Steel Wire Rope, 7x19 Strand Core, 0.024" Dia, 70 Lb Break Strength, 10' Long  [MC 3461T621]
 4. (2) Vented 18-8 Ss Socket Head Cap Screw, 4-40 Thread, 1/2" Length, .035" Vent Diameter                      [MC 93235A110]
