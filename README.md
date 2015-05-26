@@ -4,7 +4,7 @@ The OmniGrip is a master manipulator gripper device capable of rendering a progr
 ## Assembly Instructions
 List of materials needed to assemble the OmniGrip:
 
-0. (quantity) description [McMaster-Carr part number]
+(quantity) description [McMaster-Carr part number]
 
 1. (8) 3D printed parts of the device
   1. Long lever
